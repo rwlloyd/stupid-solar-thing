@@ -1,0 +1,331 @@
+EESchema Schematic File Version 4
+LIBS:stupid-solar-thing-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Module:WeMos_D1_mini U1
+U 1 1 60C605BE
+P 3100 3550
+F 0 "U1" H 3100 2661 50  0000 C CNN
+F 1 "WeMos_D1_mini" H 3100 2570 50  0000 C CNN
+F 2 "Module:WEMOS_D1_mini_light" H 3100 2400 50  0001 C CNN
+F 3 "https://wiki.wemos.cc/products:d1:d1_mini#documentation" H 1250 2400 50  0001 C CNN
+	1    3100 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L SparkFun-DiscreteSemi:TRANS_NPN-2N3904 Q?
+U 1 1 60C68CA6
+P 10200 5900
+F 0 "Q?" H 10344 5995 45  0000 L CNN
+F 1 "TRANS_NPN-2N3904" H 10344 5911 45  0000 L CNN
+F 2 "TO-92" H 10200 6150 20  0001 C CNN
+F 3 "" H 10200 5900 50  0001 C CNN
+F 4 "TRANS-08447" H 10344 5816 60  0000 L CNN "Field4"
+	1    10200 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 60C6A971
+P 10250 1500
+F 0 "R2" H 10320 1546 50  0000 L CNN
+F 1 "R100K" H 10320 1455 50  0000 L CNN
+F 2 "" V 10180 1500 50  0001 C CNN
+F 3 "~" H 10250 1500 50  0001 C CNN
+	1    10250 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_PHOTO R?
+U 1 1 60C6B179
+P 10050 4250
+F 0 "R?" H 9862 4204 50  0000 R CNN
+F 1 "R_PHOTO" H 9862 4295 50  0000 R CNN
+F 2 "" V 10100 4000 50  0001 L CNN
+F 3 "~" H 10050 4200 50  0001 C CNN
+	1    10050 4250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Sensor:DHT11 U?
+U 1 1 60C6BCC1
+P 8350 1650
+F 0 "U?" V 8061 1650 50  0000 C CNN
+F 1 "DHT11" V 7970 1650 50  0000 C CNN
+F 2 "Sensor:Aosong_DHT11_5.5x12.0_P2.54mm" H 8350 1250 50  0001 C CNN
+F 3 "http://akizukidenshi.com/download/ds/aosong/DHT11.pdf" H 8500 1900 50  0001 C CNN
+	1    8350 1650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Diode:1N4004 D?
+U 1 1 60C71710
+P 9450 5950
+F 0 "D?" H 9450 6166 50  0000 C CNN
+F 1 "1N4004" H 9450 6075 50  0000 C CNN
+F 2 "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal" H 9450 5775 50  0001 C CNN
+F 3 "http://www.vishay.com/docs/88503/1n4001.pdf" H 9450 5950 50  0001 C CNN
+	1    9450 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Solar_Cell SC?
+U 1 1 60C72D30
+P 2100 1300
+F 0 "SC?" H 2208 1396 50  0000 L CNN
+F 1 "Solar_Cell" H 2208 1305 50  0000 L CNN
+F 2 "" V 2100 1360 50  0001 C CNN
+F 3 "~" V 2100 1360 50  0001 C CNN
+	1    2100 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Battery BT?
+U 1 1 60C73E17
+P 1900 2000
+F 0 "BT?" H 2008 2046 50  0000 L CNN
+F 1 "Battery" H 2008 1955 50  0000 L CNN
+F 2 "" V 1900 2060 50  0001 C CNN
+F 3 "~" V 1900 2060 50  0001 C CNN
+	1    1900 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60C8AB4D
+P 10250 1900
+F 0 "#PWR?" H 10250 1650 50  0001 C CNN
+F 1 "GND" H 10255 1727 50  0000 C CNN
+F 2 "" H 10250 1900 50  0001 C CNN
+F 3 "" H 10250 1900 50  0001 C CNN
+	1    10250 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Analog_Switch:CD4051B U?
+U 1 1 60CF08B7
+P 5450 3150
+F 0 "U?" H 5450 4031 50  0000 R CNN
+F 1 "CD4051B" H 5450 3940 50  0000 R CNN
+F 2 "" H 5600 2400 50  0001 L CNN
+F 3 "http://www.ti.com/lit/ds/symlink/cd4052b.pdf" H 5430 3250 50  0001 C CNN
+	1    5450 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 1150 8350 1350
+$Comp
+L power:GND #PWR?
+U 1 1 60D097B4
+P 4750 3150
+F 0 "#PWR?" H 4750 2900 50  0001 C CNN
+F 1 "GND" H 4755 2977 50  0000 C CNN
+F 2 "" H 4750 3150 50  0001 C CNN
+F 3 "" H 4750 3150 50  0001 C CNN
+	1    4750 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60D09EF3
+P 5350 4000
+F 0 "#PWR?" H 5350 3750 50  0001 C CNN
+F 1 "GND" H 5355 3827 50  0000 C CNN
+F 2 "" H 5350 4000 50  0001 C CNN
+F 3 "" H 5350 4000 50  0001 C CNN
+	1    5350 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 3850 5350 3950
+Wire Wire Line
+	5450 3850 5450 3950
+Wire Wire Line
+	5450 3950 5350 3950
+Connection ~ 5350 3950
+Wire Wire Line
+	5350 3950 5350 4000
+Wire Wire Line
+	4950 3150 4750 3150
+Wire Wire Line
+	5550 2450 5550 2100
+$Comp
+L Connector:Conn_01x03_Female J?
+U 1 1 60D108B4
+P 9900 3050
+F 0 "J?" H 9928 3076 50  0000 L CNN
+F 1 "Cap. Moist. Sensor" H 9928 2985 50  0000 L CNN
+F 2 "" H 9900 3050 50  0001 C CNN
+F 3 "~" H 9900 3050 50  0001 C CNN
+	1    9900 3050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60D175AC
+P 9500 3250
+F 0 "#PWR?" H 9500 3000 50  0001 C CNN
+F 1 "GND" H 9505 3077 50  0000 C CNN
+F 2 "" H 9500 3250 50  0001 C CNN
+F 3 "" H 9500 3250 50  0001 C CNN
+	1    9500 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9500 3050 9700 3050
+Wire Wire Line
+	9700 3150 9500 3150
+Wire Wire Line
+	9500 3150 9500 3250
+Wire Wire Line
+	9700 2950 9000 2950
+$Comp
+L Device:R R1
+U 1 1 60D1A25F
+P 10050 4550
+F 0 "R1" H 10120 4596 50  0000 L CNN
+F 1 "10k" H 10120 4505 50  0000 L CNN
+F 2 "" V 9980 4550 50  0001 C CNN
+F 3 "~" H 10050 4550 50  0001 C CNN
+	1    10050 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10050 4400 9450 4400
+Connection ~ 10050 4400
+$Comp
+L power:GND #PWR?
+U 1 1 60D1C427
+P 10050 4700
+F 0 "#PWR?" H 10050 4450 50  0001 C CNN
+F 1 "GND" H 10055 4527 50  0000 C CNN
+F 2 "" H 10050 4700 50  0001 C CNN
+F 3 "" H 10050 4700 50  0001 C CNN
+	1    10050 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 60D1D605
+P 8800 1650
+F 0 "#PWR?" H 8800 1400 50  0001 C CNN
+F 1 "GND" H 8805 1477 50  0000 C CNN
+F 2 "" H 8800 1650 50  0001 C CNN
+F 3 "" H 8800 1650 50  0001 C CNN
+	1    8800 1650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7800 1650 8050 1650
+Wire Wire Line
+	8650 1650 8800 1650
+Wire Wire Line
+	10250 1650 9700 1650
+Wire Wire Line
+	10250 1350 10250 1100
+Text GLabel 10000 1100 0    50   Input ~ 0
+BATT+
+Wire Wire Line
+	10000 1100 10250 1100
+Text GLabel 9700 1650 0    50   Input ~ 0
+X0
+Wire Wire Line
+	10250 1900 10250 1650
+Connection ~ 10250 1650
+Wire Notes Line
+	9350 950  10700 950 
+Wire Notes Line
+	10700 950  10700 2250
+Wire Notes Line
+	10700 2250 9350 2250
+Wire Notes Line
+	9350 2250 9350 950 
+Text GLabel 9000 2950 0    50   Input ~ 0
+X1
+Text GLabel 9450 4400 0    50   Input ~ 0
+X2
+Wire Notes Line
+	8650 2400 10700 2400
+Wire Notes Line
+	10700 2400 10700 3650
+Wire Notes Line
+	10700 3650 8650 3650
+Wire Notes Line
+	8650 3650 8650 2400
+Wire Notes Line
+	10700 3800 10700 5050
+Wire Notes Line
+	10700 5050 9050 5050
+Wire Notes Line
+	9050 5050 9050 3800
+Wire Notes Line
+	9050 3800 10700 3800
+Text GLabel 5950 2950 2    50   Input ~ 0
+X0
+Text GLabel 5950 3050 2    50   Input ~ 0
+X1
+Text GLabel 5950 3150 2    50   Input ~ 0
+X2
+Text GLabel 8350 1150 0    50   Input ~ 0
+DHT22-SIG
+Text GLabel 3500 3250 2    50   Input ~ 0
+DHT22-SIG
+Wire Notes Line
+	9100 900  9100 2250
+Wire Notes Line
+	7350 2250 7350 900 
+Text GLabel 4950 2650 0    50   Input ~ 0
+MUX-S0
+Text GLabel 3500 3550 2    50   Input ~ 0
+MUX-S0
+Text GLabel 4950 2750 0    50   Input ~ 0
+MUX-S1
+Text GLabel 3500 3450 2    50   Input ~ 0
+MUX-S1
+Text GLabel 4950 2850 0    50   Input ~ 0
+MUX-S2
+Text GLabel 3500 3350 2    50   Input ~ 0
+MUX-S2
+Wire Wire Line
+	3500 3050 4950 3050
+Text GLabel 5400 2100 0    50   Input ~ 0
+S_PWR+
+Text GLabel 9500 2700 0    50   Input ~ 0
+S_PWR+
+Text GLabel 10050 3950 0    50   Input ~ 0
+S_PWR+
+Wire Wire Line
+	9500 2700 9500 3050
+Wire Wire Line
+	10050 3950 10050 4100
+Text GLabel 7800 1650 0    50   Input ~ 0
+S_PWR+
+Wire Notes Line
+	7350 900  9100 900 
+Wire Notes Line
+	7350 2250 9100 2250
+Wire Wire Line
+	5550 2100 5400 2100
+NoConn ~ 5950 3250
+NoConn ~ 5950 3350
+NoConn ~ 5950 3450
+NoConn ~ 5950 3550
+NoConn ~ 5950 3650
+Text GLabel 3000 2500 0    50   Input ~ 0
+WEM_5V
+Wire Wire Line
+	3000 2500 3000 2750
+$EndSCHEMATC
